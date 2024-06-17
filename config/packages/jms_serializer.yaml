@@ -1,0 +1,30 @@
+jms_serializer:
+    property_naming:
+        id: jms_serializer.identical_property_naming_strategy
+    default_context:
+        serialization:
+            serialize_null: true
+        deserialization:
+            serialize_null: true
+    visitors:
+        json_serialization:
+            options:
+                - JSON_UNESCAPED_SLASHES
+                - JSON_PRESERVE_ZERO_FRACTION
+                - JSON_PRETTY_PRINT
+        xml_serialization:
+            format_output: '%kernel.debug%'
+        xml_deserialization:
+            doctype_whitelist:
+                - '<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.011/cXML.dtd">'
+                - '<!DOCTYPE cXML SYSTEM "http://xml.cXML.org/schemas/cXML/1.2.051/Fulfill.dtd">'
+    metadata:
+        cache: file
+        debug: "%kernel.debug%"
+        file_cache:
+            dir: "%kernel.cache_dir%/serializer"
+        auto_detection: true
+    handlers:
+        datetime:
+            default_format: "Y-m-d\\TH:i:s.u\\Z"
+            #default_timezone: "UTC" # defaults to whatever timezone set in php.ini or via date_default_timezone_set

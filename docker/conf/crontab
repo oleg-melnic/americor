@@ -1,0 +1,8 @@
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+#
+# m h  dom mon dow   command
+*/5 * * * * /app/bin/console database:sync --all >/tmp/database_sync.log 2>&1

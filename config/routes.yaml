@@ -1,0 +1,8 @@
+client_controllers:
+    resource: ../src/Client/UI/Http/v1/Controller/
+    type: annotation
+    prefix: api/v1/
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation

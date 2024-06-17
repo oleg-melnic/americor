@@ -1,0 +1,9 @@
+2024-06-17 09:53:01,987 INFO Set uid to user 0 succeeded
+2024-06-17 09:53:01,989 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-06-17 09:53:01,990 INFO supervisord started with pid 6
+2024-06-17 09:53:03,001 INFO spawned: 'php-fpm' with pid 7
+2024-06-17 09:53:03,004 INFO spawned: 'nginx' with pid 8
+2024-06-17 09:53:03,008 INFO spawned: 'cron' with pid 9
+2024-06-17 09:53:04,059 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-06-17 09:53:04,061 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-06-17 09:53:04,061 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity
+          name="App\Client\Domain\Entity\Client"
+          table="clients"
+          repository-class="App\Client\Infrastructure\Repository\ClientRepository"
+  >
+    <id name="id" type="integer" column="id">
+      <generator strategy="AUTO"/>
+    </id>
+    <field name="lastName" length="255"/>
+    <field name="firstName" length="255"/>
+    <field name="age" type="integer"/>
+    <field name="state" length="255"/>
+    <field name="city" length="255"/>
+    <field name="zip" length="255"/>
+    <field name="ssn" length="255" unique="true"/>
+    <field name="fico" type="integer"/>
+    <field name="email" length="255"/>
+    <field name="phone" length="255"/>
+    <field name="income" type="integer"/>
+  </entity>
+</doctrine-mapping>
